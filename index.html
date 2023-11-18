@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Veitingastaðurinn</title>
+  <title>Vefforritunarbúðin</title>
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./grid.css">
   <meta name="description" content="Vefforritunarbúðin">
@@ -14,18 +14,27 @@
 </head>
 
 <body>
-      <header>
-        <h2>Vefforritunarbúðin</h2>
 
-        <p>Nýskrá</p>
-        <p>Innskrá</p>
-        <p>Karfa</p>
-        <p>Nýjar vörur</p>
-        <p>Flokkar</p>
-       
-      </header>
+    <div class="wrapper">
 
-    <main>
+        <div class="header">
+            <header>
+                <h2>Vefforritunarbúðin</h2>
+              
+            </header>
+      
+            <nav class="navigation">
+              <ul>
+                <li>Nýskrá</li>
+                <li>Innskrá</li>
+                <li>Karfa</li>
+                <li><a href="">Nyjar vörur</a></li>
+                <li><a href="">Flokkar</a></li>
+              </ul>
+            </nav>
+          </div>
+
+    <main class="main">
 
         <h2>Nýjar Vörur</h2>
 
@@ -33,7 +42,9 @@
 
         </div>
 
-        <button>Skoða alla flokka</button>
+        <button class="button">Skoða alla flokka</button>
+
+        <h2>Skoðaðu vöruflokkana okkar</h2>
 
         <div class="flokkar">
             
@@ -101,6 +112,8 @@
         </div>
 
     </main>
+
+</div>
 
 </body>
 

@@ -156,3 +156,31 @@
     background-color: black;
   }
 
+  .boxes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: var(--vertical-space);
+    width: 100%;  
+
+  }
+
+  .box{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+    padding: calc(var(--spacing) * 0.5);
+    width: 100%;
+    font-size: 24px;
+    
+
+  }
+
+  img{
+    height: 250px;
+    max-width: 100%;
+
+    object-position: top center;
+
+  }
+ 

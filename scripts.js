@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+    
     fetch('https://vef1-2023-h2-api-791d754dda5b.herokuapp.com/products?limit=6')
         .then(response => {
             if (!response.ok) {
@@ -32,10 +33,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     productContainer.appendChild(productDiv);
                 });
             } else {
-                console.error('Invalid data structure:', data);
+                console.error(data);
             }
         })
         .catch(error => {
-            console.error('Error fetching data:', error);
+            console.error('Villa að ná í gögn:', error);
         });
 });

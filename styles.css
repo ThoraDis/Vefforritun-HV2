@@ -216,3 +216,17 @@ img{
   align-items: center;
 
 }
+
+@media screen and (min-width: 400px) {
+ .box{
+  grid-column: span 12;
+ }
+
+ .flokkur{
+  grid-column: span 12;
+ }
+
+ .button{
+  width: 40%;
+ }
+}

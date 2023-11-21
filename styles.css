@@ -232,7 +232,6 @@ img {
   align-items: center;
 }
 
-/*Skalanleiki*/
 @media screen and (min-width: 400px) {
   .box {
     grid-column: span 12;

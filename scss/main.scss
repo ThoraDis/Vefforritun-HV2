@@ -1,125 +1,113 @@
-
-/*Main section*/
-* {
+/* Reset*/
+*,
+*:before,
+*:after {
     margin: 0;
     padding: 0;
-  }
-  
-  /*seti bæði grid.css og styles saman fyri html*/
-  html {
+    box-sizing: inherit;
+}
+
+html {
     box-sizing: border-box;
     position: relative;
-  }
-  
-  html::before {
+}
+
+/* aðgangs stíll */
+.sr-only:not(:focus):not(:active) {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Grid uppgerð*/
+html::before {
     content: '';
-  
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    
-    margin-right: auto;
-    margin-left: auto;
-    
     width: calc(100% - (2 * var(--offset)));
     max-width: var(--max-width);
     min-height: 100vh;
+    margin-right: auto;
+    margin-left: auto;
     background-image: var(--grid-background-columns);
     background-size: var(--grid-background-width) 100%;
     z-index: 1000;
     pointer-events: none;
-  }
-  
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
-  
-  .sr-only:not(:focus):not(:active) {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-  }
-  
-  
-  .main {
+}
+
+/* aðal body*/
+.main {
     display: grid;
-    grid-template-rows: auto;
     grid-template-columns: 100%;
-    gap: var(--vertical-space);
+    grid-template-rows: auto;
     width: var(--width-offset);
     max-width: var(--max-width);
-  }
-  
-  
-  .wrapper {
+    gap: var(--vertical-space);
+}
+
+.wrapper {
     display: grid;
-    grid-template-rows: auto;
     grid-template-columns: 100%;
-    /* grid items eru miðjuð */
+    grid-template-rows: auto;
     justify-items: center;
     gap: var(--vertical-space);
-  }
-  
-  
-  .flokkar{
+}
+
+/* flokkar */
+.flokkar {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
-    gap: var(--vertical-space);
     justify-items: center;
-    width: 100%;  
-  
-  }
-  
-  .flokkur{
+    gap: var(--vertical-space);
+    width: 100%;
+}
+
+.flokkur {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
     gap: var(--spacing);
     padding: calc(var(--spacing) * 0.5);
     width: 100%;
     height: 130px;
-  
-    justify-content: center;
-    text-align: center;
-  
     font-size: 24px;
     border: 1px solid black;
-  
-  }
-  
-  .header {
+}
+
+/* header */
+.header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--spacing);
     padding-top: var(--spacing);
+    gap: var(--spacing);
     width: 100%;
     background-color: black;
     color: #fff9ee;
-  }
-  
-  .header header {
+}
+
+.header header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: var(--width-offset);
     text-align: center;
-  
-    
+    max-width: var(--width-offset);
     font-size: 48px;
-  }
-  
-  a {
+}
+
+/* stíll linksins */
+a {
     color: inherit;
     background-color: inherit;
     text-decoration: none;
-  }
-  
+}

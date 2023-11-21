@@ -1,0 +1,24 @@
+{
+  "name": "vefforritun-hv2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass styles.scss styles.css",
+    "browser-sync": "browser-sync start --server --files index.html styles.css",
+    "dev": "concurrently npm:sass npm:browser-sync",
+    "lint": "stylelint \"**/*.{css,scss}\"",
+    "build": "",
+    "start": ""
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "concurrently": "^8.2.2",
+    "sass": "^1.69.5",
+    "stylelint": "^15.11.0",
+    "stylelint-config-sass-guidelines": "^10.0.0"
+  }
+}

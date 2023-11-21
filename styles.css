@@ -1,16 +1,4 @@
 @charset "UTF-8";
-/*Skalanleiki*/
-@media screen and (min-width: 400px) {
-  .box {
-    grid-column: span 12;
-  }
-  .flokkur {
-    grid-column: span 12;
-  }
-  .button {
-    width: 40%;
-  }
-}
 /* https://css-tricks.com/building-css-grid-overlay/ */
 :root {
   --grid-color: hsla(0, 75%, 75%, 0.25);
@@ -163,18 +151,6 @@ a {
   text-decoration: none;
 }
 
-@media screen and (min-width: 400px) {
-  .box {
-    grid-column: span 12;
-  }
-  .flokkur {
-    grid-column: span 12;
-  }
-  .button {
-    width: 40%;
-  }
-}
-
 .navigation {
   display: flex;
   flex-wrap: wrap;
@@ -254,6 +230,19 @@ img {
 .leitaBox {
   display: flex;
   align-items: center;
+}
+
+/*Skalanleiki*/
+@media screen and (min-width: 400px) {
+  .box {
+    grid-column: span 12;
+  }
+  .flokkur {
+    grid-column: span 12;
+  }
+  .button {
+    width: 40%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

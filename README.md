@@ -33,6 +33,6 @@ Netfang: tdg5@hi.is
 
 Patrekur:
 
-GitHub:
+GitHub: Patti103
 
-Netfang: 
+Netfang: pej10@hi.is

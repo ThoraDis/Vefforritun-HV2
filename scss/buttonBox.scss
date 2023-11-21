@@ -1,0 +1,35 @@
+
+/*seti bæði box og buttons saman*/
+.button {
+    display: inline-block;
+    padding: var(--spacing);
+    border-radius: var(--border-radius);
+    width: 15%;
+  
+    text-decoration: none;
+    text-align: center;
+  
+    font-size: 16px;
+    color: #fff9ee;
+    background-color: black;
+  }
+  
+  .boxes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: var(--vertical-space);
+    width: 100%;  
+  
+  }
+  
+  .box{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+    padding: calc(var(--spacing) * 0.5);
+    width: 100%;
+    font-size: 24px;
+    
+  
+  }

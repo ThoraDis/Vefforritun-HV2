@@ -1,186 +1,218 @@
 
 :root {
-    /* Grunn bilið okkar er 1rem == 16px */
-    --font-base-body-px: 16px;
-    --spacing: 1rem;
-    /* Bil á milli „stærri“ eininga (header, efnisbox, footer) */
-    --vertical-space: calc(var(--gutter));
-    /* Hámarksbreidd á efni */
-    --max-width: 1400px;
-    --width-offset: calc(100% - (2 * var(--offset)));
-    /* Border breiddir */
-    --border-small: 1px;
-    --border-large: 8px;
-    --border-radius: 6px;
-    /* Litir */
-    --color-gold: #ffe7ae;
-    --color-gold-light: #fff1cf;
-    --color-dark: #2f0505;
-    --color-light: #fff9ee;
-    /* Grid stillingar */
-    --columns: 12;
-    --gutter: 30px;
-    --offset: 20px;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  html {
-    box-sizing: border-box;
-  }
-  
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
+  /* Grunn bilið okkar er 1rem == 16px */
+  --font-base-body-px: 16px;
+  --spacing: 1rem;
+  /* Bil á milli „stærri“ eininga (header, efnisbox, footer) */
+  --vertical-space: calc(var(--gutter));
+  /* Hámarksbreidd á efni */
+  --max-width: 1400px;
+  --width-offset: calc(100% - (2 * var(--offset)));
+  /* Border breiddir */
+  --border-small: 1px;
+  --border-large: 8px;
+  --border-radius: 6px;
+  /* Litir */
+  --color-gold: #ffe7ae;
+  --color-gold-light: #fff1cf;
+  --color-dark: #2f0505;
+  --color-light: #fff9ee;
+  /* Grid stillingar */
+  --columns: 12;
+  --gutter: 30px;
+  --offset: 20px;
+}
 
-  .sr-only:not(:focus):not(:active) {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-  }
+* {
+  margin: 0;
+  padding: 0;
+}
 
+html {
+  box-sizing: border-box;
+}
 
-  .main {
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 100%;
-    gap: var(--vertical-space);
-    width: var(--width-offset);
-    max-width: var(--max-width);
-  }
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
 
 
-  .wrapper {
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 100%;
-    /* grid items eru miðjuð */
-    justify-items: center;
-    gap: var(--vertical-space);
-  }
+.main {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+  gap: var(--vertical-space);
+  width: var(--width-offset);
+  max-width: var(--max-width);
+}
+
+
+.wrapper {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+  /* grid items eru miðjuð */
+  justify-items: center;
+  gap: var(--vertical-space);
+}
 
 
 .flokkar{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr;
-    gap: var(--vertical-space);
-    justify-items: center;
-    width: 100%;  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: var(--vertical-space);
+  justify-items: center;
+  width: 100%;  
 
 }
 
 .flokkur{
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing);
-    padding: calc(var(--spacing) * 0.5);
-    width: 100%;
-    height: 130px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+  padding: calc(var(--spacing) * 0.5);
+  width: 100%;
+  height: 130px;
 
-    justify-content: center;
-    text-align: center;
+  justify-content: center;
+  text-align: center;
 
-    font-size: 24px;
-    border: 1px solid black;
+  font-size: 24px;
+  border: 1px solid black;
 
 }
 
 .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing);
-    padding-top: var(--spacing);
-    width: 100%;
-    background-color: black;
-    color: #fff9ee;
-  }
-  
-  .header header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: var(--width-offset);
-    text-align: center;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing);
+  padding-top: var(--spacing);
+  width: 100%;
+  background-color: black;
+  color: #fff9ee;
+}
 
-  a {
-    color: inherit;
-    background-color: inherit;
-    text-decoration: none;
-  }
+.header header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: var(--width-offset);
+  text-align: center;
+
+  
+  font-size: 48px;
+}
+
+a {
+  color: inherit;
+  background-color: inherit;
+  text-decoration: none;
+}
 
 
 .navigation {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: var(--spacing) 0;
-    width: 100%;
-    background-color: black;
-    color:  #fff9ee;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: var(--spacing) 0;
+  width: 100%;
+  background-color: black;
+  color:  #fff9ee;
+}
+
+.navigation ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing);
+  width: 100%;
+  max-width: var(--width-offset);
+  list-style: none;
+}
+
+
+.button {
+  display: inline-block;
+  padding: var(--spacing);
+  border-radius: var(--border-radius);
+  width: 15%;
+
+  text-decoration: none;
+  text-align: center;
+
+  font-size: 16px;
+  color: #fff9ee;
+  background-color: black;
+}
+
+.boxes{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: var(--vertical-space);
+  width: 100%;  
+
+}
+
+.box{
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+  padding: calc(var(--spacing) * 0.5);
+  width: 100%;
+  font-size: 24px;
   
-  .navigation ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--spacing);
-    width: 100%;
-    max-width: var(--width-offset);
-    list-style: none;
-  }
 
+}
 
-  .button {
-    display: inline-block;
-    padding: var(--spacing);
-    border-radius: var(--border-radius);
-    width: 15%;
+img{
+  height: 250px;
+  max-width: 100%;
 
-    text-decoration: none;
-    text-align: center;
+  object-position: top center;
 
-    font-size: 16px;
-    color: #fff9ee;
-    background-color: black;
-  }
+}
 
-  .boxes{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr;
-    gap: var(--vertical-space);
-    width: 100%;  
+.search{
+  padding: calc(var(--spacing) * 0.5);
+  margin-right: 10px;
 
-  }
+}
 
-  .box{
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing);
-    padding: calc(var(--spacing) * 0.5);
-    width: 100%;
-    font-size: 24px;
-    
+.leitTakki{
+  display: inline-block;
+  border-radius: var(--border-radius);
+  padding: 8px;
 
-  }
+  text-decoration: none;
+  text-align: center;
 
-  img{
-    height: 250px;
-    max-width: 100%;
+  font-size: 16px;
+  color: #fff9ee;
+  background-color: black;
 
-    object-position: top center;
+}
 
-  }
- 
+.leitaBox p{
+  margin-right: 10px;
+}
+
+.leitaBox{
+  display: flex;
+  align-items: center;
+
+}

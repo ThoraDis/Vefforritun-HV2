@@ -1,4 +1,20 @@
+@charset "UTF-8";
+/* https://css-tricks.com/building-css-grid-overlay/ , grid.css*/
+:root {
+  --grid-color: hsla(0, 75%, 75%, 0.25);
+  --grid-repeating-width: calc(100% / var(--columns));
+  --grid-column-width: calc((100% / var(--columns)) - var(--gutter));
+  --grid-background-width: calc(100% + var(--gutter));
+  --grid-background-columns: repeating-linear-gradient(
+    to right,
+    var(--grid-color),
+    var(--grid-color) var(--grid-column-width),
+    transparent var(--grid-column-width),
+    transparent var(--grid-repeating-width)
+  );
+}
 
+/*styles.css*/
 :root {
   /* Grunn bilið okkar er 1rem == 16px */
   --font-base-body-px: 16px;
@@ -23,13 +39,34 @@
   --offset: 20px;
 }
 
+/*Main section*/
 * {
   margin: 0;
   padding: 0;
 }
 
+/*seti bæði grid.css og styles saman fyri html*/
 html {
   box-sizing: border-box;
+  position: relative;
+}
+
+html::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: calc(100% - 2 * var(--offset));
+  max-width: var(--max-width);
+  min-height: 100vh;
+  background-image: var(--grid-background-columns);
+  background-size: var(--grid-background-width) 100%;
+  z-index: 1000;
+  pointer-events: none;
 }
 
 *,
@@ -48,7 +85,6 @@ html {
   width: 1px;
 }
 
-
 .main {
   display: grid;
   grid-template-rows: auto;
@@ -57,7 +93,6 @@ html {
   width: var(--width-offset);
   max-width: var(--max-width);
 }
-
 
 .wrapper {
   display: grid;
@@ -68,31 +103,26 @@ html {
   gap: var(--vertical-space);
 }
 
-
-.flokkar{
+.flokkar {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 1fr;
   gap: var(--vertical-space);
   justify-items: center;
-  width: 100%;  
-
+  width: 100%;
 }
 
-.flokkur{
+.flokkur {
   display: flex;
   flex-direction: column;
   gap: var(--spacing);
   padding: calc(var(--spacing) * 0.5);
   width: 100%;
   height: 130px;
-
   justify-content: center;
   text-align: center;
-
   font-size: 24px;
   border: 1px solid black;
-
 }
 
 .header {
@@ -112,8 +142,6 @@ html {
   align-items: center;
   max-width: var(--width-offset);
   text-align: center;
-
-  
   font-size: 48px;
 }
 
@@ -123,7 +151,6 @@ a {
   text-decoration: none;
 }
 
-
 .navigation {
   display: flex;
   flex-wrap: wrap;
@@ -131,7 +158,7 @@ a {
   padding: var(--spacing) 0;
   width: 100%;
   background-color: black;
-  color:  #fff9ee;
+  color: #fff9ee;
 }
 
 .navigation ul {
@@ -144,75 +171,65 @@ a {
   list-style: none;
 }
 
-
+/*seti bæði box og buttons saman*/
 .button {
   display: inline-block;
   padding: var(--spacing);
   border-radius: var(--border-radius);
   width: 15%;
-
   text-decoration: none;
   text-align: center;
-
   font-size: 16px;
   color: #fff9ee;
   background-color: black;
 }
 
-.boxes{
+.boxes {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 1fr;
   gap: var(--vertical-space);
-  width: 100%;  
-
+  width: 100%;
 }
 
-.box{
+.box {
   display: flex;
   flex-direction: column;
   gap: var(--spacing);
   padding: calc(var(--spacing) * 0.5);
   width: 100%;
   font-size: 24px;
-  
-
 }
 
-img{
+img {
   height: 250px;
   max-width: 100%;
-
   object-position: top center;
-
 }
 
-.search{
+.search {
   padding: calc(var(--spacing) * 0.5);
   margin-right: 10px;
-
 }
 
-.leitTakki{
+.leitTakki {
   display: inline-block;
   border-radius: var(--border-radius);
   padding: 8px;
-
   text-decoration: none;
   text-align: center;
-
   font-size: 16px;
   color: #fff9ee;
   background-color: black;
-
 }
 
-.leitaBox p{
+.leitaBox p {
   margin-right: 10px;
 }
 
-.leitaBox{
+.leitaBox {
   display: flex;
   align-items: center;
-
 }
+
+/*# sourceMappingURL=styles.css.map */

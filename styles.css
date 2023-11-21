@@ -112,6 +112,9 @@
     align-items: center;
     max-width: var(--width-offset);
     text-align: center;
+
+    
+    font-size: 48px;
   }
 
   a {

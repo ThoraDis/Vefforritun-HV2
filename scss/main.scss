@@ -23,7 +23,7 @@ html {
     white-space: nowrap;
 }
 
-/* Grid uppgerð*/
+/* Grid uppgerð
 html::before {
     content: '';
     position: absolute;
@@ -41,6 +41,8 @@ html::before {
     z-index: 1000;
     pointer-events: none;
 }
+
+*/
 
 /* aðal body*/
 .main {

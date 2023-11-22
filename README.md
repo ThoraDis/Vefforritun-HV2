@@ -19,8 +19,8 @@ styles.css er skipt í Scss þanning að...
 - nav.scss: nav stillingar
 - leit.scss: stillingar fyrir leitar kassan
 - imgSearch.scss: stillingar fyrir img og Search  
-- buttonBox.scss: stillingar fyrir button og Box  
-- responsive.scss: stillingar fyrir Skjalanleika 
+- buttonBox.scss: stillingar fyrir button, Box og product-details 
+- responsive.scss: stillingar fyrir Skalanleika 
 
 
 
@@ -29,7 +29,7 @@ styles.css er skipt í Scss þanning að...
 JavaScript:
  - scripts.js: JavaScript fyrir forsíða og byrtit  sex nýjustu vörurnar.
 - vorulisti.js: JavaScript fyrir vörulista sem útbýr stuðning við leit.
-- vorusida.js: JavaScript fyrir vörusíðu sem ...
+- vorusida.js: JavaScript fyrir vörusíðu sem sínir allar upplýsingar um eina vöru og sýnir þrjár svipaðar vörur.
 
 ## Hvernig skal keyra verkefnið
 notað er:

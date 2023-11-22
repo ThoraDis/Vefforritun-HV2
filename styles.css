@@ -200,6 +200,23 @@ a {
   font-size: 24px;
 }
 
+.product-details {
+  display: grid;
+  gap: var(--vertical-space);
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+  width: 100%;
+  font-size: 24px;
+}
+
+.product img {
+  width: 40%;
+}
+
 img {
   height: 250px;
   max-width: 100%;
@@ -211,7 +228,7 @@ img {
   margin-right: 10px;
 }
 
-.leitTakki {
+.leittakki {
   display: inline-block;
   border-radius: var(--border-radius);
   padding: 8px;
@@ -222,11 +239,11 @@ img {
   background-color: black;
 }
 
-.leitaBox p {
+.leitabox p {
   margin-right: 10px;
 }
 
-.leitaBox {
+.leitabox {
   display: flex;
   align-items: center;
 }

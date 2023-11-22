@@ -29,15 +29,28 @@
           if (data && Array.isArray(data.items) && data.items.length > 0) {
             
             data.items.forEach(product => {
-              const productDiv = document.createElement("div");
-              productDiv.className = "box";
+
+           
+              const productLink = document.createElement("a");
+              productLink.href = `vorusida.html?id=${product.id}`;
+  
+    
+               const productDiv = document.createElement("div");
+               productDiv.className = "box";
+  
+      
               productDiv.innerHTML = `
-                <img src="${product.image}" alt="Product Image">
-                <h3>${product.title}</h3>
-                <p>${product.price} kr.-</p>
-                <p>${product.category_title || 'N/A'}</p>
+               <img src="${product.image}" alt="Product Image">
+               <h3>${product.title}</h3>
+               <p>${product.price} kr.-</p>
+               <p>${product.category_title || 'N/A'}</p>
               `;
-              productContainer.appendChild(productDiv);
+  
+      
+              productLink.appendChild(productDiv);
+  
+      
+              productContainer.appendChild(productLink); 
             });
           } else {
             

@@ -7,9 +7,9 @@
 Í þessu verkefni eru þrjár síður.
 
 HTML:
-index.html: Er forsíða verkefnsins.
-vorulisti.html: Er listi yfir öllum vörum í Vefforritunarbúðini.
-vorusida.html: Innihelddur upplýsingar um eina vöru.
+- index.html: Er forsíða verkefnsins.
+- vorulisti.html: Er listi yfir öllum vörum í Vefforritunarbúðini.
+- vorusida.html: Innihelddur upplýsingar um eina vöru.
 
 CSS:
 styles.css er skipt í Scss þanning að...
@@ -27,9 +27,9 @@ styles.css er skipt í Scss þanning að...
 
 
 JavaScript:
-scripts.js: JavaScript fyrir forsíða og byrtit sex nýjustu vörurnar.
-vorulisti.js: JavaScript fyrir vörulista sem útbýr stuðning við leit.
-vorusida.js: JavaScript fyrir vörusíðu sem ...
+ - scripts.js: JavaScript fyrir forsíða og byrtit  sex nýjustu vörurnar.
+- vorulisti.js: JavaScript fyrir vörulista sem útbýr stuðning við leit.
+- vorusida.js: JavaScript fyrir vörusíðu sem ...
 
 ## Hvernig skal keyra verkefnið
 notað er:

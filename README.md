@@ -12,6 +12,18 @@ vorulisti.html: Er listi yfir öllum vörum í Vefforritunarbúðini.
 vorusida.html: Innihelddur upplýsingar um eina vöru.
 
 CSS:
+styles.css er skipt í Scss þanning að...
+
+- config.scss: Grun stillingar
+- main.scss: heildar stillingar 
+- nav.scss: nav stillingar
+- leit.scss: stillingar fyrir leitar kassan
+- imgSearch.scss: stillingar fyrir img og Search  
+- buttonBox.scss: stillingar fyrir button og Box  
+- responsive.scss: stillingar fyrir Skjalanleika 
+
+
+
 
 
 JavaScript:
@@ -20,8 +32,10 @@ vorulisti.js: JavaScript fyrir vörulista sem útbýr stuðning við leit.
 vorusida.js: JavaScript fyrir vörusíðu sem ...
 
 ## Hvernig skal keyra verkefnið
-Verkefnið skal keyra með npm run dev.
-En til að keyra stlyelint skal skrifa npm run lint.
+notað er:
+- npm run dev
+- npm run lint (stylelint og Eslint)
+
 
 
 ## Hópurinn

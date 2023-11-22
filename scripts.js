@@ -14,23 +14,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (data && Array.isArray(data.items)) {
                 data.items.forEach(product => {
-                    
-                    const productDiv = document.createElement("div");
-                    productDiv.className = "box";
+    
+             const productLink = document.createElement("a");
+            productLink.href = `sidur/vorusida.html?id=${product.id}`;
+
+  
+             const productDiv = document.createElement("div");
+             productDiv.className = "box";
+
+    
+            productDiv.innerHTML = `
+             <img src="${product.image}" alt="Product Image">
+             <h3>${product.title}</h3>
+             <p>${product.price} kr.-</p>
+             <p>${product.category_title || 'N/A'}</p>
+            `;
+
+    
+            productLink.appendChild(productDiv);
+
+    
+            productContainer.appendChild(productLink);
 
                     
-                    const categoryName = product.category_title || 'N/A';
-
-                    
-                    productDiv.innerHTML = `
-                        <img src="${product.image}" alt="Product Image">
-                        <h3>${product.title}</h3>
-                        <p>${product.price} kr.-</p>
-                        <p>${categoryName}</p>
-                    `;
-
-                    
-                    productContainer.appendChild(productDiv);
                 });
             } else {
                 console.error(data);

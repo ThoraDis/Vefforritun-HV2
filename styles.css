@@ -62,25 +62,26 @@ html {
   white-space: nowrap;
 }
 
-/* Grid uppgerð*/
+/* Grid uppgerð
 html::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: calc(100% - 2 * var(--offset));
-  max-width: var(--max-width);
-  min-height: 100vh;
-  margin-right: auto;
-  margin-left: auto;
-  background-image: var(--grid-background-columns);
-  background-size: var(--grid-background-width) 100%;
-  z-index: 1000;
-  pointer-events: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - (2 * var(--offset)));
+    max-width: var(--max-width);
+    min-height: 100vh;
+    margin-right: auto;
+    margin-left: auto;
+    background-image: var(--grid-background-columns);
+    background-size: var(--grid-background-width) 100%;
+    z-index: 1000;
+    pointer-events: none;
 }
 
+*/
 /* aðal body*/
 .main {
   display: grid;
